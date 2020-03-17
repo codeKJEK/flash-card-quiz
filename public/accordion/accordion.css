@@ -1,0 +1,79 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #efeeee;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.nav {
+    /* width: 100vw; */
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f7df1e 25%, #d7c118, #f7df1e 80%) ;
+    height: 15vh;
+    border: 2px solid #f7f31e;
+    overflow: hidden;
+    box-shadow:0px 10px 30px rgba(124, 124, 124, 0.308);
+}
+
+.box {
+    margin: 0 auto !important;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 0px;
+    border-bottom: 1px solid #565857;
+    background-color: whitesmoke;
+    box-shadow: inset 0px 0px 50px rgb(235, 228, 228);
+    color: #323330;
+}
+
+ul {
+    display: none;
+}
+
+li {
+    /* border-top: 2px solid silver; */
+    border-bottom: 1px solid #8A8D91;
+    box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.479);
+    /* border-radius: .25em; */
+    width: 100%;
+    color: white;
+    padding: 12px;
+    background: rgb(88, 90, 84);
+}
+
+.boxOpen {
+    height: 200px;
+    transition: 5s;
+}
+
+
+.logo {
+    filter: drop-shadow(-0px -0px .5px black) drop-shadow(1px 1px 2px rgb(85, 84, 84)) drop-shadow(0px 0px 3px #6b5f00) drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.787));
+    height: 90%;
+}
+
+.logo:active {
+    transform: scale(.98);
+    filter: drop-shadow(-0px -0px .0005em rgb(134, 134, 134)) drop-shadow(1px 1px 2px rgb(85, 84, 84)) drop-shadow(0px 0px 1px #6b5f00) drop-shadow(0px 0px .0005em black);
+}
+
+
+
+/* .js6 {
+    margin: 0 0%; 
+} */
+
+
