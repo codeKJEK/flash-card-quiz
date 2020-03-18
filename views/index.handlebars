@@ -1,4 +1,6 @@
+<input type="text" name="answer" id="answer-input">
 <div>{{questions.answer}}</div>
+<button id="answer-button" data-check={{questions.answer}}>Submit Answer</button>
 
 <div class="containerOne" class="columns">
   <div class="nav">
@@ -53,3 +55,13 @@
       Here is where the hints will go, (possibly a hidden div.)
     </div>
   </div>
+
+  <script>
+    $("#answer-button").on("click", function() {
+      if ($("#answer-input").val() === $("#answer-button").attr("data-check")) {
+        console.log("true");
+      }else {
+        console.log("false");
+      }
+    });
+  </script>
