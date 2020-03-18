@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "flashcard_db_quiz",
+    "database": "flashcard_quiz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
