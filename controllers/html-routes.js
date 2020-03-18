@@ -1,6 +1,8 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
+var Sequelize = require("sequelize");
 
+var Op = Sequelize.Op;
 var db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
@@ -29,10 +31,22 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/members/js", isAuthenticated, function(req, res) {
+  app.get("/members/:category/:index", isAuthenticated, function(req, res) {
     // Write code here to retrieve all of the todos from the database and res.json them
-    db.Question.findAll({})
+    db.Question.findOne({
+      where: {
+        [Op.and]: [
+          {
+            category: req.params.category
+          },
+          {
+            exercise: parseInt(req.params.index)
+          }
+        ]
+      }
+    })
       .then(jsQuestions => res.render("index", { questions: jsQuestions }))
+      // .then(jsQuestions => res.json(jsQuestions))
       .catch(err => res.status(500).json(err));
     // back to the user
   });

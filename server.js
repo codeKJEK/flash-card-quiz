@@ -2,6 +2,11 @@
 var express = require("express");
 var session = require("express-session");
 var exphbs = require("express-handlebars");
+const Handlebars = require("handlebars");
+var {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
+
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 
@@ -21,7 +26,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
+  })
+);
 app.set("view engine", "handlebars");
 
 // Requiring our routes
@@ -39,7 +50,7 @@ db.sequelize
       code: "var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
       label: "var strLength = ",
       answer: "str.length;",
-      category: "String Methods"
+      category: "String_Methods"
     });
     db.Question.create({
       exercise: 2,
@@ -47,7 +58,7 @@ db.sequelize
       code: "var str= 'Please locate where 'locate' occurs!'",
       label: "var position = ",
       answer: "str.indexOf('locate');",
-      category: "String Methods"
+      category: "String_Methods"
     });
     db.Question.create({
       exercise: 3,
@@ -55,7 +66,7 @@ db.sequelize
       code: "var str= 'Apple, Banana, Kiwi';",
       label: "var results = ",
       answer: "str.slice(7,13);",
-      category: "String Methods"
+      category: "String_Methods"
     });
     // NUMBER ============================
     db.Question.create({
@@ -64,7 +75,7 @@ db.sequelize
       code: "var num = 123;",
       label: "var numString = ",
       answer: "num.toString();",
-      category: "Number Methods"
+      category: "Number_Methods"
     });
     db.Question.create({
       exercise: 2,
@@ -72,7 +83,7 @@ db.sequelize
       code: "var num = 9.656;",
       label: "var fixedNum = ",
       answer: "num.toFixed(2);",
-      category: "Number Methods"
+      category: "Number_Methods"
     });
     db.Question.create({
       exercise: 3,
@@ -80,7 +91,7 @@ db.sequelize
       code: "var txt = '10';",
       label: "var num = ",
       answer: "parseInt(txt);",
-      category: "Number Methods"
+      category: "Number_Methods"
     });
     // ARRAY ============================
     db.Question.create({
@@ -90,7 +101,7 @@ db.sequelize
       code: "var fruits = ['Banana','Orange','Apple'];",
       label: null,
       answer: "fruits.pop();",
-      category: "Array Methods"
+      category: "Array_Methods"
     });
     db.Question.create({
       exercise: 2,
@@ -98,7 +109,7 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Mango'];",
       label: "var fruitString =",
       answer: "fruits.toString();",
-      category: "Array Methods"
+      category: "Array_Methods"
     });
     db.Question.create({
       exercise: 3,
@@ -107,7 +118,7 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Kiwi'];",
       label: null,
       answer: "fruits.sort();",
-      category: "Array Methods"
+      category: "Array_Methods"
     });
   })
   .then(function() {
