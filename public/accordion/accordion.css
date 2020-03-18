@@ -15,20 +15,20 @@ body {
 }
 
 .nav {
-    /* width: 100vw; */
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f7df1e 25%, #d7c118, #f7df1e 80%) ;
-    height: 15vh;
+    box-shadow:1px 1px 50px rgb(0, 0, 0);
+    background-color: #f7df1e;
+    min-height: 15%;
+    max-height: 15%;
     border: 2px solid #f7f31e;
     overflow: hidden;
-    box-shadow:0px 10px 30px rgba(124, 124, 124, 0.308);
+    padding: 5px;
 }
 
 .box {
-    margin: 0 auto !important;
+    margin: 0 auto !important; 
     width: 100vw;
     padding: 10px 0;
     text-align: center;
@@ -59,18 +59,74 @@ li {
     transition: 5s;
 }
 
+.tray {
+    width: 100vw;
+    /* height: 6vw; */
+    box-shadow:0px 10px 30px rgba(124, 124, 124, 0.308), inset 2px 2px 30px rgba(124, 124, 124, 0.308);
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    /* border: 1px solid black; */
+}
+
+.fa-angle-double-down{
+    margin: 0 auto;
+    /* transform: rotate(180deg); */
+}
+
+.fa-angle-double-down{
+    margin: 0 auto;
+    /* transform: rotate(180deg); */
+}
+
+/* Neu Content */
 
 .logo {
-    filter: drop-shadow(-0px -0px .5px black) drop-shadow(1px 1px 2px rgb(85, 84, 84)) drop-shadow(0px 0px 3px #6b5f00) drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.787));
-    height: 90%;
+    filter: drop-shadow(0px 0px 1px rgb(255, 217, 0)) drop-shadow(-5px -4px 5px #ffe600) drop-shadow(5px 4px 5px rgb(231, 170, 14));
+    height: 100%;
+    width: 100%;
 }
 
 .logo:active {
     transform: scale(.98);
-    filter: drop-shadow(-0px -0px .0005em rgb(134, 134, 134)) drop-shadow(1px 1px 2px rgb(85, 84, 84)) drop-shadow(0px 0px 1px #6b5f00) drop-shadow(0px 0px .0005em black);
+    filter: drop-shadow(-0px -0px .0005em white) drop-shadow(1px -1px 2px rgba(211, 160, 30, 0.637));
 }
 
+.neuOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    min-width: 5em;
+    /*max-width: 9em;*/
+    /* padding: 3px; */
+    min-height: 5em;
+    max-height: 18px;
+    /*max-height: 9em;*/
+    border: 2px solid rgba(255, 255, 255, 0.34);
+    border-right-color: rgba(211, 159, 30, 0.287);
+    border-bottom-color:  rgba(211, 160, 30, 0.287);
+    border-radius: .5em;
+    background: #f7df1e;
+    box-shadow:  7px 2px 30px rgb(231, 170, 14),
+                 10px 20px 100px rgba(231, 170, 14, 0.219),
+                 -4px -5px 5px #ffff00,
+                 -20px -20px 60px #ffff239a;
+    transition: .045s;
+}
 
+.neuOne:active {
+    box-shadow:  -3px -1px 5px rgb(231, 170, 14),
+                 -4px -1px 60px rgba(231, 170, 14, 0.568),
+                 2px 3px 3px #ffff00,
+                 15px 15px 60px #ffff23ca,
+                 inset 2px 2px 15px rgba(231, 170, 14, 0.76),
+                 /* inset -10px -20px 100px rgba(231, 170, 14, 0.219), */
+                 inset -4px -5px 15px #ffff00;
+                 /* inset 20px 20px 60px #ffff239a; */
+    transition: .045s;
+}
 
 /* .js6 {
     margin: 0 0%; 
