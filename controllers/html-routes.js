@@ -36,4 +36,12 @@ module.exports = function(app) {
       .catch(err => res.status(500).json(err));
     // back to the user
   });
+
+  app.get("/members/js/:id", isAuthenticated, function(req, res) {
+    // Write code here to retrieve all of the todos from the database and res.json them
+    db.Question.findAll({})
+      .then(jsQuestions => res.render("index", { questions: jsQuestions }))
+      .catch(err => res.status(500).json(err));
+    // back to the user
+  });
 };
