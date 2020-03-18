@@ -31,14 +31,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  // app.get("/members/js", isAuthenticated, function(req, res) {
-  //   // Write code here to retrieve all of the todos from the database and res.json them
-  //   db.Question.findAll({})
-  //     .then(jsQuestions => res.render("index", { questions: jsQuestions }))
-  //     .catch(err => res.status(500).json(err));
-  //   // back to the user
-  // });
-
   app.get("/members/:category/:index", isAuthenticated, function(req, res) {
     // Write code here to retrieve all of the todos from the database and res.json them
     db.Question.findOne({
@@ -53,8 +45,8 @@ module.exports = function(app) {
         ]
       }
     })
-      // .then(jsQuestions => res.render("index", { questions: jsQuestions }))
-      .then(jsQuestions => res.json(jsQuestions))
+      .then(jsQuestions => res.render("index", { questions: jsQuestions }))
+      // .then(jsQuestions => res.json(jsQuestions))
       .catch(err => res.status(500).json(err));
     // back to the user
   });
