@@ -1,0 +1,88 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hr {
+  border-color: black;
+  color: black;
+  text-shadow: crimson;
+}
+
+.containerOne {
+  margin: 25px;
+  background-color: rgb(112, 112, 112);
+}
+
+#navBarContent {
+  width: 100%;
+  height: 65px;
+  background-color: yellow;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.containerTwo {
+  height: 600px;
+  padding: 60px;
+  margin-top: 50px;
+  background-color: rgb(247, 247, 247);
+}
+
+/* #questionBox {
+  height: 300px;
+  padding: 25px;
+  background-color: tomato;
+} */
+
+#questionTitle {
+  height: 65px;
+  text-align: center;
+  background-color: rgb(17, 22, 99);
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: yellow;
+  border-style: solid;
+  text-shadow: 0 0 3px rgb(117, 124, 11);
+  color: aliceblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#questionContent {
+  height: 150px;
+  text-align: center;
+  background-color: rgb(214, 214, 214);
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: rgb(17, 22, 99);
+  border-style: solid;
+  text-shadow: 0 0 3px white;
+  font-family: sans-serif;
+  font-size: larger;
+}
+
+#answerBox {
+  height: 80px;
+  text-align: center;
+  background-color: darkslategrey;
+  border-radius: 15px;
+
+  font-family: sans-serif;
+  font-size: larger;
+}
+
+#hintBox {
+  height: 40px;
+  text-align: center;
+  background-color: rgba(248, 181, 36, 0.836);
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-size: large;
+}
+
+/* form.signup,
+form.login {
+  margin-top: 50px;
+} */
