@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "Papajoelee123",
-=======
     "password": "root",
->>>>>>> a08bf4dae68f5a8fea070eaa844c28b5cd3c0d6d
     "database": "flashcard_quiz_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
