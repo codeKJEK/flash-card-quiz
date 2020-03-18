@@ -1,0 +1,90 @@
+.wrapper {
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    /* margin-top: 20%; */
+}
+
+.logo-section {
+    width: 95vw;
+    height: 45%;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: .5em;
+}
+
+.logIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95vw;
+    height: 33%;
+    margin: 0 auto;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: .5em;
+    text-align: center;
+}
+
+select {
+    margin: 25px 35%;
+    outline: none;
+    text-align: center;
+    background-color: red;
+}
+
+/* .control {
+   background-color: red;
+} */
+
+.input {
+    width: 100%;
+    text-align: center;
+}
+
+.middle img {
+    background: red;
+    position: absolute;
+}
+                
+
+
+
+
+
+
+
+
+
+
+                .top {
+                    width: 100vw;
+                    height: 33.33%;
+                    /* background: rgb(222,76,38); */
+                    background-position: center;
+                    background-size: cover;
+                    border: 1px solid black;
+                    /* clip-path: polygon(0 0, 75% 0s, 0 75%); */
+                }
+                
+                .middle {
+                    width: 100vw;
+                    height: 33.33%;
+                    /* background: rgb(240,219,79); */
+                    background-position: center right;
+                    background-size: cover;
+                    border: 1px solid black;
+                    /* clip-path: polygon(0% 75%, 0 100%, 25% 100%, 100% 25%, 100% 0%, 75% 0); */
+                }
+                
+                .bottom {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100vw;
+                    height: 33.33%;
+                    /* background: #264de4; */
+                    background-position: center top;
+                    background-size: cover;
+                    border: 1px solid black;
+                    /* clip-path: polygon(100% 25%, 25% 100%, 100% 100%); */
+                }
