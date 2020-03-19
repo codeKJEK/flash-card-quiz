@@ -51,7 +51,9 @@ db.sequelize
       label: "var strLength = ",
       answer: "str.length;",
       category: "string_methods",
-      next: "/members/string_methods/2"
+      next: "/members/string_methods/2",
+      maxlength: 11,
+      width: "width:66px"
     });
     db.Question.create({
       exercise: 2,
@@ -60,7 +62,9 @@ db.sequelize
       label: "var position = ",
       answer: "str.indexOf('locate');",
       category: "string_methods",
-      next: "/members/string_methods/3"
+      next: "/members/string_methods/3",
+      maxlength: 22,
+      width: "width:125px"
     });
     db.Question.create({
       exercise: 3,
@@ -69,7 +73,9 @@ db.sequelize
       label: "var results = ",
       answer: "str.slice(7,13);",
       category: "string_methods",
-      next: "/members/string_methods/4"
+      next: "/members/string_methods/4",
+      maxlength: 16,
+      width: "width:87px"
     });
     db.Question.create({
       exercise: 4,
@@ -78,7 +84,9 @@ db.sequelize
       label: "var newStr =",
       answer: "str.replace('Hello','Goodbye');",
       category: "string_methods",
-      next: "/members/string_methods/5"
+      next: "/members/string_methods/5",
+      maxlength: 31,
+      width: "width:180px"
     });
     db.Question.create({
       exercise: 5,
@@ -87,7 +95,9 @@ db.sequelize
       label: "var uppercaseStr =",
       answer: "str.toUpperCase();",
       category: "string_methods",
-      next: "/members/string_methods/6"
+      next: "/members/string_methods/6",
+      maxlength: 18,
+      width: "width:111px"
     });
     db.Question.create({
       exercise: 6,
@@ -96,7 +106,9 @@ db.sequelize
       label: "var lowercaseStr =",
       answer: "str.toLowerCase();",
       category: "string_methods",
-      next: "/members/string_methods/7"
+      next: "/members/string_methods/7",
+      maxlength: 18,
+      width: "width:111px"
     });
     db.Question.create({
       exercise: 7,
@@ -105,7 +117,9 @@ db.sequelize
       label: "var indexZero = ",
       answer: "str.charAt(0);",
       category: "string_methods",
-      next: "/members/string_methods/8"
+      next: "/members/string_methods/8",
+      maxlength: 14,
+      width: "width:85px"
     });
     db.Question.create({
       exercise: 8,
@@ -114,7 +128,9 @@ db.sequelize
       label: "var strArray =",
       answer: "str.split(“,”);",
       category: "string_methods",
-      next: "/members/number_methods/1"
+      next: "/members/number_methods/1",
+      maxlength: 15,
+      width: "width:75px"
     });
     // NUMBER ============================
     db.Question.create({
@@ -124,7 +140,9 @@ db.sequelize
       label: "var numString = ",
       answer: "num.toString();",
       category: "number_methods",
-      next: "/members/number_methods/2"
+      next: "/members/number_methods/2",
+      maxlength: 15,
+      width: "width:97px"
     });
     db.Question.create({
       exercise: 2,
@@ -133,7 +151,9 @@ db.sequelize
       label: "var fixedNum = ",
       answer: "num.toFixed(2);",
       category: "number_methods",
-      next: "/members/number_methods/3"
+      next: "/members/number_methods/3",
+      maxlength: 15,
+      width: "width:100px"
     });
     db.Question.create({
       exercise: 3,
@@ -142,7 +162,9 @@ db.sequelize
       label: "var num = ",
       answer: "parseInt(txt);",
       category: "number_methods",
-      next: "/members/array_methods/1"
+      next: "/members/array_methods/1",
+      maxlength: 14,
+      width: "width:80px"
     });
     // ARRAY ============================
     db.Question.create({
@@ -153,7 +175,9 @@ db.sequelize
       label: null,
       answer: "fruits.pop();",
       category: "array_methods",
-      next: "/members/array_methods/2"
+      next: "/members/array_methods/2",
+      maxlength: 13,
+      width: "width:75px"
     });
     db.Question.create({
       exercise: 2,
@@ -162,7 +186,9 @@ db.sequelize
       label: "var fruitString =",
       answer: "fruits.toString();",
       category: "array_methods",
-      next: "/members/array_methods/3"
+      next: "/members/array_methods/3",
+      maxlength: 18,
+      width: "width:100px"
     });
     db.Question.create({
       exercise: 3,
@@ -172,7 +198,9 @@ db.sequelize
       label: null,
       answer: "fruits.sort();",
       category: "array_methods",
-      next: "/members/array_methods/4"
+      next: "/members/array_methods/4",
+      maxlength: 14,
+      width: "width:72px"
     });
     db.Question.create({
       exercise: 4,
@@ -182,16 +210,20 @@ db.sequelize
       label: "bothArrays =",
       answer: "array1.concat(array2);",
       category: "array_methods",
-      next: "/members/array_methods/5"
+      next: "/members/array_methods/5",
+      maxlength: 22,
+      width: "width:134px"
     });
     db.Question.create({
       exercise: 5,
       question: "Get the value “Volvo” from the cars array",
       code: "var cars = [“Saab”, “Volvo”, “BMW”];",
       label: "var x =",
-      answer: "var x = cars[1];",
+      answer: "cars[1];",
       category: "array_methods",
-      next: "/members/array_methods/6"
+      next: "/members/array_methods/6",
+      maxlength: 16,
+      width: "width:50px"
     });
     db.Question.create({
       exercise: 6,
@@ -200,7 +232,9 @@ db.sequelize
       label: "-------- = “Ford”;",
       answer: "cars[0]",
       category: "array_methods",
-      next: "/members/array_methods/7"
+      next: "/members/array_methods/7",
+      maxlength: 7,
+      width: "width:48px"
     });
     db.Question.create({
       exercise: 7,
@@ -210,7 +244,9 @@ db.sequelize
       label: "alert(------------------);",
       answer: "cars.length",
       category: "array_methods",
-      next: "/members/module/complete"
+      next: "/members",
+      maxlength: 11,
+      width: "width:75px"
     });
   })
   .then(function() {
