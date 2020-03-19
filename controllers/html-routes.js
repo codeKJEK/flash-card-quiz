@@ -50,9 +50,4 @@ module.exports = function(app) {
       .catch(err => res.status(500).json(err));
     // back to the user
   });
-
-  app.get("/members/module/complete", isAuthenticated, function(req, res) {
-    // Write code here to retrieve all of the todos from the database and res.json them
-    res.render("complete");
-  });
 };
