@@ -5,3 +5,13 @@ $(document).ready(function() {
     $(".member-name").text(data.email);
   });
 });
+
+// const htmlBtn = $(".html-box");
+const jsBtn = $(".js-box");
+// const cssBtn = $("css-box");
+
+jsBtn.on("click", function() {
+  console.log("clicked");
+
+  jsBtn.toggleClass("box-clicked");
+});
