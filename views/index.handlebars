@@ -1,53 +1,74 @@
-    <div class="containerOne" class="columns">
-        <div class="nav">
-            <img src="./accordion/images/js6.png" class="logo js6" />
-          </div>
-          <div class="wrapper" id="nav-toggle">
-            <div class="box" id="box1">
-              <h1>Numbers</h1>
-              <ul class="Num-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-            <div class="box" id="box2">
-              <h1>Strings</h1>
-              <ul class="Str-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-            <div class="box" id="box3">
-              <h1>Arrays</h1>
-              <ul class="Arr-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-          </div>
-
-        <!-- <div id="navBarContent" class="column is-12">
-            Ethan's NavBar goes here
-        </div>
-    </div> -->
-
-    <div class="containerTwo">
-        <div id="questionTitle" class="column is-12">
-            Exercise one, two, three
-        </div>
-
-        <div id="questionContent" class="column is-12">
-            Question content, where the question is written
-        </div>
-        <hr>
-        <div id="answerBox" class="column is-12">
-            Here is where the answer input will go (input submit button).
-        </div>
-
-        <div id="hintBox" class="column is-12">
-            Here is where the hints will go, (possibly a hidden div.)
-        </div>
+<div class="nav">
+      <div class="neuOne">
+        <img src="./images/js6.png" class="logo js6" />
+      </div>
     </div>
+    <div class="wrapper" id="nav-toggle">
+      <div class="box" id="box1">
+        <h1>Numbers</h1>
+        <ul class="Num-list">
+          <li>Excersise One</li>
+          <li>Excersise Two</li>
+          <li>Excersise Three</li>
+        </ul>
+      </div>
+      <div class="box" id="box2">
+        <h1>Strings</h1>
+        <ul class="Str-list">
+          <li>Excersise One</li>
+          <li>Excersise Two</li>
+          <li>Excersise Three</li>
+        </ul>
+      </div>
+      <div class="box" id="box3">
+        <h1>Arrays</h1>
+        <ul class="Arr-list">
+          <li>Excersise One</li>
+          <li>Excersise Two</li>
+          <li>Excersise Three</li>
+        </ul>
+      </div>
+      <div class="tray">
+        <div class="fas arrow fa-angle-double-down"></div>
+      </div>
+    </div>
+        <div class="tray">
+          <div class="fas arrow fa-angle-double-down"></div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <div class="containerTwo">
+      <!-- <div class="btn-bar">
+        <button class="button is-dark previous-btn">Previous</button>
+        <button class="button is-dark next-btn">Next</button>
+      </div> -->
+      <div class="exersise">
+        <div id="questionTitle" class="is-12">
+          Exersise one
+        </div>
+        <div id="questionContent" class="is-12">
+          Question content, where the question is written. THis is an examle of
+          a really long question. it just goes on and on and on.and it eeps
+          going forever and ever eand never ends. ever.
+        </div>
+      </div>
+      <div class="control">
+        <input
+          class="input is-warning"
+          type="text"
+          placeholder="Enter your answer here"
+        />
+        <button class="button is-dark submit-btn">Submit</button>
+      </div>
+      <div class="divider"></div>
+
+      <div id="hintBox" class="hintBox">
+        <button class="button is-dark">Show answer</button>
+        Need some help?
+      </div>
+    </div>
+
+    <footer class="footer navBtm">
+      <button class="logtOutBtn button is-light">
+        Log out
+      </button>
+    </footer>
