@@ -69,14 +69,21 @@
       $("#correct-answer").removeClass("hide");
       $("#wrong-answer").addClass("hide");
     } else {
+      $("#correct-answer").addClass("hide");
       $("#wrong-answer").removeClass("hide");
     }
   });
 
   $("#show-answer").on("click", function () {
-    $("#question").addClass("hide");
-    $("#answer").removeClass("hide");
-    console.log('hello')
+    if ($("#answer").hasClass("hide")) {
+      $("#question").addClass("hide");
+      $("#answer").removeClass("hide");
+      $("#show-answer").text("Hide Answer");
+    }else {
+       $("#question").removeClass("hide");
+      $("#answer").addClass("hide");
+      $("#show-answer").text("Hide Answer");
+    }
   });
 
 
