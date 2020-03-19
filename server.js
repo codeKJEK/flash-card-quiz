@@ -165,7 +165,7 @@ db.sequelize
       question: "Concatenate “array1” and “array2”",
       code:
         "var array1 = ['Cecilie', 'Lone'];<br>var array2 = ['Emil', 'Tobias', 'Linus'];",
-      label: "bothArrays =", 
+      label: "bothArrays =",
       answer: "array1.concat(array2);",
       category: "Array_Methods"
     });
@@ -187,7 +187,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 7,
-      question: "Alert the number of items in an array, using the correct Array method",
+      question:
+        "Alert the number of items in an array, using the correct Array method",
       code: "var cars = [“Volvo”,”Jeep”,”Mercedes”];",
       label: "alert(------------------);",
       answer: "cars.length",
