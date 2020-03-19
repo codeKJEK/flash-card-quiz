@@ -32,16 +32,16 @@
       </div>
       <div id="questionContent" class="is-12 questionContent">
         {{questions.code}}
+      <p id="correct-answer" class="hide correct">CORRECT! <a class="next" href={{questions.next}}>Next ></a></p>
+      <p id="wrong-answer" class="hide incorrect">INCORRECT, Try again!</p>
       </div>
     </div>
     <div class="control">
-      <label for="answer">{{questions.label}}</label>
+      <label for="answer" class="Label">{{questions.label}}</label>
 
       <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}}
         class="input is-warning" type="text" />
       <button id="answer-button" data-answer={{questions.answer}} class="button is-dark submit-btn">Submit</button>
-      <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
-      <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
     </div>
   </div>
   <div id="answer" class="hide">
@@ -54,17 +54,17 @@
       </div>
     </div>
     <div class="control">
-      <label for="answer">{{questions.label}}</label>
+      <label for="answer" class="Label">{{questions.label}}</label>
 
-      <p>{{questions.answer}}</p>
+      <p class="showAnswer"><em>{{questions.answer}}</em></p>
     </div>
   </div>
 
   <div class="divider"></div>
 
   <div id="hintBox" class="hintBox">
-    <button id="show-answer" class="button is-dark">Show Answer</button>
-    Need some help?
+    <em>Need some help?</em>
+    <button id="show-answer" class="button is-dark help-btn">Show Answer</button>
   </div>
 
   
@@ -74,5 +74,8 @@
 <footer class="footer navBtm">
   <button class="logtOutBtn button is-light">
     Log out
+  </button>
+  <button class="logtOutBtn home-button button is-light">
+    Home
   </button>
 </footer>

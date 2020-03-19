@@ -1,5 +1,6 @@
 * {
   font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
   /* font-size: 20px; */
 }
 
@@ -66,13 +67,21 @@
 .control {
   display: flex;
   justify-content: center;
-  margin: 0 20px;
+  margin: 0;
 }
 
 .input {
+  width: 40%;
+  /* height: 25px; */
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  align-self: flex-end;
+  /* align-self: flex-end; */
+}
+
+.Label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 /* .button {
@@ -87,13 +96,20 @@
 
 .hintBox {
   /* height: 40px; */
+  font-size: 20px;
   text-align: center;
   border-radius: .25em;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 8px;
   /* font-family: sans-serif; */
   /* font-size: large; */
+}
+
+.help-btn {
+  width: 35%;
+  margin: 0 auto;
 }
 
 /* form.signup,
@@ -242,7 +258,7 @@ footer {
 
 .navBtm {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100vw;
   background-color: #f7df1e;
   border: 2px solid #f7f31e;
@@ -257,9 +273,50 @@ footer {
   font-size: 12px;
 }
 
+.home-button {
+  border-radius: .25em;
+  width: 65px;
+  height: 25px;
+  font-size: 12px;
+}
+
+.correct {
+  display: block;
+  margin-top: 14px;
+  color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+.incorrect {
+  display: block;
+  font-size: 14px;
+  margin-top: 15px;
+  color: red;
+}
+
+.next {
+  margin: 0 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.next:hover {
+  color: green
+}
+
 @media only screen and (min-width: 768px) {
-  .containerTwo {
-    /* flex-direction: row; */
+  .Label {
+    font-size: 30px;
+  }
+
+  .hintBox {
+    font-size: 30px;
+  }
+
+  .help-btn {
+    width: 30%;
+    margin: 20px auto;
   }
 
   .input {
@@ -290,12 +347,48 @@ footer {
     /* height: 40px; */
     font-size: 20px;
   }
+
+  .correct {
+    font-size: 20px;
+  }
+
+  .incorrect {
+    font-size: 20px;
+
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .containerTwo {
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 50px 20px;
+  }
+
+  .help-btn {
+    width: 25%;
+  }
+
+  #questionContent {
+   margin: 35px;
+  }
+
+  .tray {
+    padding: 15px;
+  }
+
+  .fa-angle-double-down{
+   font-size: 20px;
+  }
+
+  .showAnswer {
+    font-size: 30px;
+    color: rgb(4, 204, 4)
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .containerTwo {
+    position: relative;
   }
 }
 
@@ -308,5 +401,13 @@ footer {
 
 #questionContent {
   margin: 60px 20px;
+}
+
+.help-btn {
+  width: 14%;
+}
+
+.correct {
+  font-size: 25px;
 }
 }
