@@ -1,93 +1,53 @@
-<div id="question">
-  <p>{{questions.question}}</p>
-  <p>{{questions.code}}</p>
-  <label for="answer">{{questions.label}}</label>
-  <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}} style={{questions.width}}>
-  <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
-  <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
-  <button id="answer-button"data-answer={{questions.answer}}>Submit Answer</button>
-  <button id="show-answer">Show Answer</button>
-</div>
-<div id="answer" class="hide">
-  <p>{{questions.question}}</p>
-  <p>{{questions.code}}</p>
-  <p>{{questions.label}}{{questions.answer}}</p>
-  <button id="hide-answer">Show Answer</button>
-</div>
+    <div class="containerOne" class="columns">
+        <div class="nav">
+            <img src="./accordion/images/js6.png" class="logo js6" />
+          </div>
+          <div class="wrapper" id="nav-toggle">
+            <div class="box" id="box1">
+              <h1>Numbers</h1>
+              <ul class="Num-list">
+                <li>Excersise One</li>
+                <li>Excersise Two</li>
+                <li>Excersise Three</li>
+              </ul>
+            </div>
+            <div class="box" id="box2">
+              <h1>Strings</h1>
+              <ul class="Str-list">
+                <li>Excersise One</li>
+                <li>Excersise Two</li>
+                <li>Excersise Three</li>
+              </ul>
+            </div>
+            <div class="box" id="box3">
+              <h1>Arrays</h1>
+              <ul class="Arr-list">
+                <li>Excersise One</li>
+                <li>Excersise Two</li>
+                <li>Excersise Three</li>
+              </ul>
+            </div>
+          </div>
 
-
-
-<div class="containerOne" class="columns">
-  <div class="nav">
-    <img src="./accordion/images/js6.png" class="logo js6" />
-  </div>
-  <div class="wrapper" id="nav-toggle">
-    <div class="box" id="box1">
-      <h1>Numbers</h1>
-      <ul class="Num-list">
-        <li>Excersise One</li>
-        <li>Excersise Two</li>
-        <li>Excersise Three</li>
-      </ul>
-    </div>
-    <div class="box" id="box2">
-      <h1>Strings</h1>
-      <ul class="Str-list">
-        <li>Excersise One</li>
-        <li>Excersise Two</li>
-        <li>Excersise Three</li>
-      </ul>
-    </div>
-    <div class="box" id="box3">
-      <h1>Arrays</h1>
-      <ul class="Arr-list">
-        <li>Excersise One</li>
-        <li>Excersise Two</li>
-        <li>Excersise Three</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- <div id="navBarContent" class="column is-12">
+        <!-- <div id="navBarContent" class="column is-12">
             Ethan's NavBar goes here
         </div>
     </div> -->
 
-  <div class="containerTwo">
-    <div id="questionTitle" class="column is-12">
-      Exercise one, two, three
+    <div class="containerTwo">
+        <div id="questionTitle" class="column is-12">
+            Exercise one, two, three
+        </div>
+
+        <div id="questionContent" class="column is-12">
+            Question content, where the question is written
+        </div>
+        <hr>
+        <div id="answerBox" class="column is-12">
+            Here is where the answer input will go (input submit button).
+        </div>
+
+        <div id="hintBox" class="column is-12">
+            Here is where the hints will go, (possibly a hidden div.)
+        </div>
     </div>
-
-    <div id="questionContent" class="column is-12">
-      Question content, where the question is written
-    </div>
-    <hr>
-    <div id="answerBox" class="column is-12">
-      Here is where the answer input will go (input submit button).
-    </div>
-
-    <div id="hintBox" class="column is-12">
-      Here is where the hints will go, (possibly a hidden div.)
-    </div>
-  </div>
-
-  <script>
-    $("#answer-button").on("click", function () {
-      if ($("#answer-input").val() === $("#answer-button").attr("data-answer")) {
-        $("#correct-answer").removeClass("hide");
-        $("#wrong-answer").addClass("hide");
-      } else {
-        $("#wrong-answer").removeClass("hide");
-      }
-    });
-
-    $("#show-answer").on("click", function () {
-      $("#question").addClass("hide");
-      $("#answer").removeClass("hide");
-    });
-
-    $("#hide-answer").on("click", function () {
-      $("#answer").addClass("hide");
-      $("#question").removeClass("hide");
-    });
-  </script>
