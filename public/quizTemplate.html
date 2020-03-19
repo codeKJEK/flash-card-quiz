@@ -7,47 +7,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="./accordion/accordion.css" />
     <link href="stylesheets/quizStyle.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
+  <div class="nav">
+    <div class="neuOne">
+      <img src="./images/js6.png" class="logo js6" />
+    </div>
+  </div>
+  <div class="wrapper" id="nav-toggle">
+    <div class="box" id="box1">
+      <h1>Numbers</h1>
+      <ul class="Num-list">
+        <li>Excersise One</li>
+        <li>Excersise Two</li>
+        <li>Excersise Three</li>
+      </ul>
+    </div>
+    <div class="box" id="box2">
+      <h1>Strings</h1>
+      <ul class="Str-list">
+        <li>Excersise One</li>
+        <li>Excersise Two</li>
+        <li>Excersise Three</li>
+      </ul>
+    </div>
+    <div class="box" id="box3">
+      <h1>Arrays</h1>
+      <ul class="Arr-list">
+        <li>Excersise One</li>
+        <li>Excersise Two</li>
+        <li>Excersise Three</li>
+      </ul>
+    </div>
+  </div>
+      <div class="tray">
+        <div class="fas arrow fa-angle-double-down"></div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <!-- Depending on what Ethan is doing for the navbar, this container can maybe be edited out -->
     <div class="containerOne" class="columns">
-        <div class="nav">
-            <img src="./accordion/images/js6.png" class="logo js6" />
-          </div>
-          <div class="wrapper" id="nav-toggle">
-            <div class="box" id="box1">
-              <h1>Numbers</h1>
-              <ul class="Num-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-            <div class="box" id="box2">
-              <h1>Strings</h1>
-              <ul class="Str-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-            <div class="box" id="box3">
-              <h1>Arrays</h1>
-              <ul class="Arr-list">
-                <li>Excersise One</li>
-                <li>Excersise Two</li>
-                <li>Excersise Three</li>
-              </ul>
-            </div>
-          </div>
+      
 
-        <!-- <div id="navBarContent" class="column is-12">
-            Ethan's NavBar goes here
-        </div>
-    </div> -->
 
     <div class="containerTwo">
         <div id="questionTitle" class="column is-12">
@@ -68,8 +69,12 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="./accordion/accordion.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/accordion.js"></script>
 
 </body>
 </html>
