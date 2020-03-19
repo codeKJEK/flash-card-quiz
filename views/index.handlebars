@@ -1,8 +1,21 @@
-<div>{{questions.exercise}}</div>
-<div>{{questions.question}}</div>
-<input type="text" name="answer" id="answer-input">
-<div>{{questions.answer}}</div>
-<button id="answer-button" data-check={{questions.answer}}>Submit Answer</button>
+<div id="question">
+  <p>{{questions.question}}</p>
+  <p>{{questions.code}}</p>
+  <label for="answer">{{questions.label}}</label>
+  <input type="text" name="answer" id="answer-input" spellcheck="false">
+  <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
+  <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
+  <button id="answer-button">Submit Answer</button>
+  <button id="show-answer">Show Answer</button>
+</div>
+<div id="answer" class="hide">
+  <p>{{questions.question}}</p>
+  <p>{{questions.code}}</p>
+  <p>{{questions.label}}<span id="answer">{{questions.answer}}</span></p>
+  <button id="hide-answer">Show Answer</button>
+</div>
+
+
 
 <div class="containerOne" class="columns">
   <div class="nav">
@@ -59,11 +72,22 @@
   </div>
 
   <script>
-    $("#answer-button").on("click", function() {
-      if ($("#answer-input").val() === $("#answer-button").attr("data-check")) {
-        console.log("true");
-      }else {
-        console.log("false");
+    $("#answer-button").on("click", function () {
+      if ($("#answer-input").val() === $("#answer").text) {
+        $("#correct-answer").removeClass("hide");
+        $("#wrong-answer").addClass("hide");
+      } else {
+        $("#wrong-answer").removeClass("hide");
       }
+    });
+
+    $("#show-answer").on("click", function () {
+      $("#question").addClass("hide");
+      $("#answer").removeClass("hide");
+    });
+
+    $("#hide-answer").on("click", function () {
+      $("#answer").addClass("hide");
+      $("#question").removeClass("hide");
     });
   </script>
