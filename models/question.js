@@ -5,7 +5,10 @@ module.exports = function(sequelize, DataTypes) {
     code: DataTypes.STRING,
     label: DataTypes.STRING,
     answer: DataTypes.STRING,
-    category: DataTypes.STRING
+    category: DataTypes.STRING,
+    next: DataTypes.STRING,
+    maxlength: DataTypes.INTEGER,
+    width: DataTypes.STRING
   });
   return Question;
 };

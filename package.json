@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "flash-card-quiz",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,17 +8,18 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "run": "heroku run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "2.4.3",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.1",
-    "mysql": "^2.18.1",
     "mysql2": "^1.7.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

@@ -2,6 +2,11 @@
 var express = require("express");
 var session = require("express-session");
 var exphbs = require("express-handlebars");
+var Handlebars = require("handlebars");
+var {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
+
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
 
@@ -21,7 +26,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
+  })
+);
 app.set("view engine", "handlebars");
 
 // Requiring our routes
@@ -35,11 +46,14 @@ db.sequelize
     // STRING ============================
     db.Question.create({
       exercise: 1,
-      question: "Find the length of  the 'str' variable.",
+      question: "Find the length of  the 'str'variable.",
       code: "var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
       label: "var strLength = ",
       answer: "str.length;",
-      category: "String Methods"
+      category: "string_methods",
+      next: "/members/string_methods/2",
+      maxlength: 11,
+      width: "width:66px"
     });
     db.Question.create({
       exercise: 2,
@@ -47,7 +61,10 @@ db.sequelize
       code: "var str= 'Please locate where 'locate' occurs!'",
       label: "var position = ",
       answer: "str.indexOf('locate');",
-      category: "String Methods"
+      category: "string_methods",
+      next: "/members/string_methods/3",
+      maxlength: 22,
+      width: "width:125px"
     });
     db.Question.create({
       exercise: 3,
@@ -55,7 +72,65 @@ db.sequelize
       code: "var str= 'Apple, Banana, Kiwi';",
       label: "var results = ",
       answer: "str.slice(7,13);",
-      category: "String Methods"
+      category: "string_methods",
+      next: "/members/string_methods/4",
+      maxlength: 16,
+      width: "width:87px"
+    });
+    db.Question.create({
+      exercise: 4,
+      question: "Replace 'Hello' with 'Goodbye' in the 'str' variable.",
+      code: "var str ='Hello World';",
+      label: "var newStr =",
+      answer: "str.replace('Hello','Goodbye');",
+      category: "string_methods",
+      next: "/members/string_methods/5",
+      maxlength: 31,
+      width: "width:180px"
+    });
+    db.Question.create({
+      exercise: 5,
+      question: "Convert the 'str' variable into all uppercase letters.",
+      code: "var str= 'hello world'",
+      label: "var uppercaseStr =",
+      answer: "str.toUpperCase();",
+      category: "string_methods",
+      next: "/members/string_methods/6",
+      maxlength: 18,
+      width: "width:111px"
+    });
+    db.Question.create({
+      exercise: 6,
+      question: "Convert the 'str' variable into all lowercase letters.",
+      code: "var str = 'HELLO WORLD';",
+      label: "var lowercaseStr =",
+      answer: "str.toLowerCase();",
+      category: "string_methods",
+      next: "/members/string_methods/7",
+      maxlength: 18,
+      width: "width:111px"
+    });
+    db.Question.create({
+      exercise: 7,
+      question: "Find the character at index 0 in the 'str' variable",
+      code: "var str ='Hello World';",
+      label: "var indexZero = ",
+      answer: "str.charAt(0);",
+      category: "string_methods",
+      next: "/members/string_methods/8",
+      maxlength: 14,
+      width: "width:85px"
+    });
+    db.Question.create({
+      exercise: 8,
+      question: "Convert the “str” variable into an array using the “,”.",
+      code: "var str = “a,b,c,d,e,f,g,h”;",
+      label: "var strArray =",
+      answer: "str.split(“,”);",
+      category: "string_methods",
+      next: "/members/number_methods/1",
+      maxlength: 15,
+      width: "width:75px"
     });
     // NUMBER ============================
     db.Question.create({
@@ -64,7 +139,10 @@ db.sequelize
       code: "var num = 123;",
       label: "var numString = ",
       answer: "num.toString();",
-      category: "Number Methods"
+      category: "number_methods",
+      next: "/members/number_methods/2",
+      maxlength: 15,
+      width: "width:97px"
     });
     db.Question.create({
       exercise: 2,
@@ -72,7 +150,10 @@ db.sequelize
       code: "var num = 9.656;",
       label: "var fixedNum = ",
       answer: "num.toFixed(2);",
-      category: "Number Methods"
+      category: "number_methods",
+      next: "/members/number_methods/3",
+      maxlength: 15,
+      width: "width:100px"
     });
     db.Question.create({
       exercise: 3,
@@ -80,7 +161,10 @@ db.sequelize
       code: "var txt = '10';",
       label: "var num = ",
       answer: "parseInt(txt);",
-      category: "Number Methods"
+      category: "number_methods",
+      next: "/members/array_methods/1",
+      maxlength: 14,
+      width: "width:80px"
     });
     // ARRAY ============================
     db.Question.create({
@@ -90,7 +174,10 @@ db.sequelize
       code: "var fruits = ['Banana','Orange','Apple'];",
       label: null,
       answer: "fruits.pop();",
-      category: "Array Methods"
+      category: "array_methods",
+      next: "/members/array_methods/2",
+      maxlength: 13,
+      width: "width:75px"
     });
     db.Question.create({
       exercise: 2,
@@ -98,7 +185,10 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Mango'];",
       label: "var fruitString =",
       answer: "fruits.toString();",
-      category: "Array Methods"
+      category: "array_methods",
+      next: "/members/array_methods/3",
+      maxlength: 18,
+      width: "width:100px"
     });
     db.Question.create({
       exercise: 3,
@@ -107,7 +197,56 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Kiwi'];",
       label: null,
       answer: "fruits.sort();",
-      category: "Array Methods"
+      category: "array_methods",
+      next: "/members/array_methods/4",
+      maxlength: 14,
+      width: "width:72px"
+    });
+    db.Question.create({
+      exercise: 4,
+      question: "Concatenate “array1” and “array2”",
+      code:
+        "var array1 = ['Cecilie', 'Lone'];<br>var array2 = ['Emil', 'Tobias', 'Linus'];",
+      label: "bothArrays =",
+      answer: "array1.concat(array2);",
+      category: "array_methods",
+      next: "/members/array_methods/5",
+      maxlength: 22,
+      width: "width:134px"
+    });
+    db.Question.create({
+      exercise: 5,
+      question: "Get the value “Volvo” from the cars array",
+      code: "var cars = [“Saab”, “Volvo”, “BMW”];",
+      label: "var x =",
+      answer: "cars[1];",
+      category: "array_methods",
+      next: "/members/array_methods/6",
+      maxlength: 16,
+      width: "width:50px"
+    });
+    db.Question.create({
+      exercise: 6,
+      question: "Change the first item of cars to “Ford”",
+      code: "var cars = [“Volvo”, “Jeep”, “Mercedes”];",
+      label: "-------- = “Ford”;",
+      answer: "cars[0]",
+      category: "array_methods",
+      next: "/members/array_methods/7",
+      maxlength: 7,
+      width: "width:48px"
+    });
+    db.Question.create({
+      exercise: 7,
+      question:
+        "Alert the number of items in an array, using the correct Array method",
+      code: "var cars = [“Volvo”,”Jeep”,”Mercedes”];",
+      label: "alert(------------------);",
+      answer: "cars.length",
+      category: "array_methods",
+      next: "/members",
+      maxlength: 11,
+      width: "width:75px"
     });
   })
   .then(function() {
