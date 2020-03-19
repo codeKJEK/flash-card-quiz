@@ -50,7 +50,8 @@ db.sequelize
       code: "var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
       label: "var strLength = ",
       answer: "str.length;",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/2"
     });
     db.Question.create({
       exercise: 2,
@@ -58,7 +59,8 @@ db.sequelize
       code: "var str= 'Please locate where 'locate' occurs!'",
       label: "var position = ",
       answer: "str.indexOf('locate');",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/3"
     });
     db.Question.create({
       exercise: 3,
@@ -66,7 +68,8 @@ db.sequelize
       code: "var str= 'Apple, Banana, Kiwi';",
       label: "var results = ",
       answer: "str.slice(7,13);",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/4"
     });
     db.Question.create({
       exercise: 4,
@@ -74,7 +77,8 @@ db.sequelize
       code: "var str ='Hello World';",
       label: "var newStr =",
       answer: "str.replace('Hello','Goodbye');",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/5"
     });
     db.Question.create({
       exercise: 5,
@@ -82,7 +86,8 @@ db.sequelize
       code: "var str= 'hello world'",
       label: "var uppercaseStr =",
       answer: "str.toUpperCase();",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/6"
     });
     db.Question.create({
       exercise: 6,
@@ -90,7 +95,8 @@ db.sequelize
       code: "var str = 'HELLO WORLD';",
       label: "var lowercaseStr =",
       answer: "str.toLowerCase();",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/7"
     });
     db.Question.create({
       exercise: 7,
@@ -98,15 +104,17 @@ db.sequelize
       code: "var str ='Hello World';",
       label: "var indexZero = ",
       answer: "str.charAt(0);",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/string_methods/8"
     });
-    db.question.create({
+    db.Question.create({
       exercise: 8,
       question: "Convert the “str” variable into an array using the “,”.",
       code: "var str = “a,b,c,d,e,f,g,h”;",
       label: "var strArray =",
       answer: "str.split(“,”);",
-      category: "String_Methods"
+      category: "string_methods",
+      next: "/members/number_methods/1"
     });
     // NUMBER ============================
     db.Question.create({
@@ -115,7 +123,8 @@ db.sequelize
       code: "var num = 123;",
       label: "var numString = ",
       answer: "num.toString();",
-      category: "Number_Methods"
+      category: "number_methods",
+      next: "/members/number_methods/2"
     });
     db.Question.create({
       exercise: 2,
@@ -123,7 +132,8 @@ db.sequelize
       code: "var num = 9.656;",
       label: "var fixedNum = ",
       answer: "num.toFixed(2);",
-      category: "Number_Methods"
+      category: "number_methods",
+      next: "/members/number_methods/3"
     });
     db.Question.create({
       exercise: 3,
@@ -131,7 +141,8 @@ db.sequelize
       code: "var txt = '10';",
       label: "var num = ",
       answer: "parseInt(txt);",
-      category: "Number_Methods"
+      category: "number_methods",
+      next: "/members/array_methods/1"
     });
     // ARRAY ============================
     db.Question.create({
@@ -141,7 +152,8 @@ db.sequelize
       code: "var fruits = ['Banana','Orange','Apple'];",
       label: null,
       answer: "fruits.pop();",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/array_methods/2"
     });
     db.Question.create({
       exercise: 2,
@@ -149,7 +161,8 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Mango'];",
       label: "var fruitString =",
       answer: "fruits.toString();",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/array_methods/3"
     });
     db.Question.create({
       exercise: 3,
@@ -158,7 +171,8 @@ db.sequelize
       code: "var fruits =['Banana','Orange','Apple', 'Kiwi'];",
       label: null,
       answer: "fruits.sort();",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/array_methods/4"
     });
     db.Question.create({
       exercise: 4,
@@ -167,7 +181,8 @@ db.sequelize
         "var array1 = ['Cecilie', 'Lone'];<br>var array2 = ['Emil', 'Tobias', 'Linus'];",
       label: "bothArrays =",
       answer: "array1.concat(array2);",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/array_methods/5"
     });
     db.Question.create({
       exercise: 5,
@@ -175,7 +190,8 @@ db.sequelize
       code: "var cars = [“Saab”, “Volvo”, “BMW”];",
       label: "var x =",
       answer: "var x = cars[1];",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/array_methods/6"
     });
     db.Question.create({
       exercise: 6,
@@ -183,7 +199,8 @@ db.sequelize
       code: "var cars = [“Volvo”, “Jeep”, “Mercedes”];",
       label: "-------- = “Ford”;",
       answer: "cars[0]",
-      category: "Array_Method"
+      category: "array_methods",
+      next: "/members/array_methods/7"
     });
     db.Question.create({
       exercise: 7,
@@ -192,7 +209,8 @@ db.sequelize
       code: "var cars = [“Volvo”,”Jeep”,”Mercedes”];",
       label: "alert(------------------);",
       answer: "cars.length",
-      category: "Array_Methods"
+      category: "array_methods",
+      next: "/members/module/complete"
     });
   })
   .then(function() {
