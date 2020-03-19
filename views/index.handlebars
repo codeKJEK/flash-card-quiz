@@ -20,28 +20,46 @@
 </div> --}}
 
 
-<div  class="containerTwo">
+<div class="containerTwo">
   <!-- <div class="btn-bar">
         <button class="button is-dark previous-btn">Previous</button>
         <button class="button is-dark next-btn">Next</button>
       </div> -->
-  <div id="question" class="exersise">
-    <div id="questionTitle" class="is-12 questionTitle">
-      {{questions.question}}
+  <div id="question">
+    <div class="exersise">
+      <div id="questionTitle" class="is-12 questionTitle">
+        {{questions.question}}
+      </div>
+      <div id="questionContent" class="is-12 questionContent">
+        {{questions.code}}
+      </div>
     </div>
-    <div id="questionContent" class="is-12 questionContent">
-      {{questions.code}}
-    </div>
-  </div>
-  <div class="control">
-    <label for="answer">{{questions.label}}</label>
+    <div class="control">
+      <label for="answer">{{questions.label}}</label>
 
-    <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}}
-      class="input is-warning" type="text" />
-    <button id="answer-button" data-answer={{questions.answer}} class="button is-dark submit-btn">Submit</button>
-    <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
-    <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
+      <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}}
+        class="input is-warning" type="text" />
+      <button id="answer-button" data-answer={{questions.answer}} class="button is-dark submit-btn">Submit</button>
+      <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
+      <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
+    </div>
   </div>
+  <div id="answer" class="hide">
+    <div class="exersise">
+      <div id="questionTitle" class="is-12 questionTitle">
+        {{questions.question}}
+      </div>
+      <div id="questionContent" class="is-12 questionContent">
+        {{questions.code}}
+      </div>
+    </div>
+    <div class="control">
+      <label for="answer">{{questions.label}}</label>
+
+      <p>{{questions.answer}}</p>
+    </div>
+  </div>
+
   <div class="divider"></div>
 
   <div id="hintBox" class="hintBox">
@@ -49,6 +67,7 @@
     Need some help?
   </div>
 
+  
 </div>
 
 
@@ -57,4 +76,3 @@
     Log out
   </button>
 </footer>
-
