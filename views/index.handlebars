@@ -2,16 +2,16 @@
   <p>{{questions.question}}</p>
   <p>{{questions.code}}</p>
   <label for="answer">{{questions.label}}</label>
-  <input type="text" name="answer" id="answer-input" spellcheck="false">
+  <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}} style={{questions.width}}>
   <p id="correct-answer" class="hide">CORRECT! <a href={{questions.next}}>Next ></a></p>
   <p id="wrong-answer" class="hide">INCORRECT, Try again!</p>
-  <button id="answer-button">Submit Answer</button>
+  <button id="answer-button"data-answer={{questions.answer}}>Submit Answer</button>
   <button id="show-answer">Show Answer</button>
 </div>
 <div id="answer" class="hide">
   <p>{{questions.question}}</p>
   <p>{{questions.code}}</p>
-  <p>{{questions.label}}<span id="answer">{{questions.answer}}</span></p>
+  <p>{{questions.label}}{{questions.answer}}</p>
   <button id="hide-answer">Show Answer</button>
 </div>
 
@@ -73,7 +73,7 @@
 
   <script>
     $("#answer-button").on("click", function () {
-      if ($("#answer-input").val() === $("#answer").text) {
+      if ($("#answer-input").val() === $("#answer-button").attr("data-answer")) {
         $("#correct-answer").removeClass("hide");
         $("#wrong-answer").addClass("hide");
       } else {
