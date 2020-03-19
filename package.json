@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "Flash-Card-Quiz",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,7 +8,8 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "run": "heroku run"
   },
   "keywords": [],
   "author": "",
