@@ -43,7 +43,7 @@ require("./controllers/api-routes.js")(app);
 db.sequelize
   .sync({ force: true })
   .then(() => {
-    // STRING ============================
+    // STRING ===========================
     db.Question.create({
       exercise: 1,
       question: "Find the length of  the \"str\" variable.",
