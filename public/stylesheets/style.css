@@ -126,7 +126,7 @@ h1, p, .subtitle {
 
     .hero .is-large, .hero-body {
         padding-bottom: 5rem !important;
-        padding-top: 5rem !important;
+        padding-top: 1rem !important;
     }
     
     /* .welcome-body {
@@ -146,7 +146,7 @@ h1, p, .subtitle {
     .boxes {
         width: 33vw;
         min-height: 30vh;
-        height: 50vh;
+        height: 44vh;
         display: flex;
         align-items: center;
     }
