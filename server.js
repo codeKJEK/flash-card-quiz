@@ -132,7 +132,7 @@ db.sequelize
       maxlength: 15,
       width: "width:75px"
     });
-    // NUMBER ============================
+    // NUMBER ===========================
     db.Question.create({
       exercise: 1,
       question: "Convert the \"num\" variable into a string.",
