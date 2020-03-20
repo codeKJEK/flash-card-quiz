@@ -37,11 +37,12 @@
       </div>
     </div>
     <div class="control">
-      <label for="answer" class="Label">{{questions.label}}</label>
-
-      <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}}
-        class="input is-warning" type="text" />
-      <button id="answer-button" data-answer={{questions.answer}} class="button is-dark submit-btn">Submit</button>
+      <form id="submit-answer">
+        <label for="answer" class="Label">{{questions.label}}</label>
+        <input type="text" name="answer" id="answer-input" spellcheck="false" maxlength={{questions.maxlength}}
+          class="input is-warning" type="text" />
+        <button type="submit" id="answer-button" data-answer={{questions.answer}} class="button is-dark submit-btn">Submit</button>
+      </form>
     </div>
   </div>
   <div id="answer" class="hide">
@@ -72,10 +73,10 @@
 
 
 <footer class="footer navBtm">
-  <button class="logtOutBtn button is-light">
+  <a href="/logout" class="logtOutBtn button is-light">
     Log out
-  </button>
-  <button class="logtOutBtn home-button button is-light">
+  </a>
+  <a href="/members" class="logtOutBtn home-button button is-light">
     Home
-  </button>
+  </a>
 </footer>

@@ -9,10 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
   <link href="../../stylesheets/quizStyle.css" rel="stylesheet">
-  <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-    ></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <style>
     .hide {
       display: none;
@@ -20,42 +17,52 @@
   </style>
 </head>
 <div class="nav">
-      <div class="neuOne">
-        <img src="../../images/js6.png" class="logo js6" />
-      </div>
-    </div>
-    <div class="wrapper" id="nav-toggle">
-      <div class="box" id="box1">
-        <h1>Numbers</h1>
-        <ul class="Num-list">
-          <li>Excersise One</li>
-          <li>Excersise Two</li>
-          <li>Excersise Three</li>
-        </ul>
-      </div>
-      <div class="box" id="box2">
-        <h1>Strings</h1>
-        <ul class="Str-list">
-          <li>Excersise One</li>
-          <li>Excersise Two</li>
-          <li>Excersise Three</li>
-        </ul>
-      </div>
-      <div class="box" id="box3">
-        <h1>Arrays</h1>
-        <ul class="Arr-list">
-          <li>Excersise One</li>
-          <li>Excersise Two</li>
-          <li>Excersise Three</li>
-        </ul>
-      </div>
-      <div class="tray">
-        <div class="fas arrow fa-angle-double-down"></div>
-      </div>
-    </div>
-        <div class="tray">
-          <div class="fas arrow fa-angle-double-down"></div>
-        </div>
+  <div class="neuOne">
+    <img src="../../images/js6.png" class="logo js6" />
+  </div>
+</div>
+<div class="wrapper" id="nav-toggle">
+  <div class="box" id="box2">
+    <h1>Strings</h1>
+    <ul class="Str-list">
+      <li><a href="/members/string_methods/1">String Methods 1</a></li>
+      <li><a href="/members/string_methods/2">String Methods 2</a></li>
+      <li><a href="/members/string_methods/3">String Methods 3</a></li>
+      <li><a href="/members/string_methods/4">String Methods 4</a></li>
+      <li><a href="/members/string_methods/5">String Methods 5</a></li>
+      <li><a href="/members/string_methods/6">String Methods 6</a></li>
+      <li><a href="/members/string_methods/7">String Methods 7</a></li>
+      <li><a href="/members/string_methods/8">String Methods 8</a></li>
+    </ul>
+  </div>
+  <div class="box" id="box1">
+    <h1>Numbers</h1>
+    <ul class="Num-list">
+      <li><a href="/members/number_methods/1">Number Methods 1</a></li>
+      <li><a href="/members/number_methods/2">Number Methods 2</a></li>
+      <li><a href="/members/number_methods/3">Number Methods 3</a></li>
+    </ul>
+  </div>
+  <div class="box" id="box3">
+    <h1>Arrays</h1>
+    <ul class="Arr-list">
+      <li><a href="/members/array_methods/1">Array Methods 1</a></li>
+      <li><a href="/members/array_methods/2">Array Methods 2</a></li>
+      <li><a href="/members/array_methods/3">Array Methods 3</a></li>
+      <li><a href="/members/array_methods/4">Array Methods 4</a></li>
+      <li><a href="/members/array_methods/5">Array Methods 5</a></li>
+      <li><a href="/members/array_methods/6">Array Methods 6</a></li>
+      <li><a href="/members/array_methods/7">Array Methods 7</a></li>
+    </ul>
+  </div>
+  <div class="tray">
+    <div class="fas arrow fa-angle-double-down"></div>
+  </div>
+</div>
+<div class="tray">
+  <div class="fas arrow fa-angle-double-down"></div>
+</div>
+
 <body>
   {{{ body }}}
 
@@ -64,29 +71,30 @@
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="../../js/accordion.js"></script>
   <script>
-  $("#answer-button").on("click", function () {
-    if ($("#answer-input").val() === $("#answer-button").attr("data-answer")) {
-      $("#correct-answer").removeClass("hide");
-      $("#wrong-answer").addClass("hide");
-    } else {
-      $("#correct-answer").addClass("hide");
-      $("#wrong-answer").removeClass("hide");
-    }
-  });
+    $("#submit-answer").on("submit", function (event) {
+      event.preventDefault();
+      if ($("#answer-input").val() === $("#answer-button").attr("data-answer")) {
+        $("#correct-answer").removeClass("hide");
+        $("#wrong-answer").addClass("hide");
+      } else {
+        $("#correct-answer").addClass("hide");
+        $("#wrong-answer").removeClass("hide");
+      }
+    });
 
-  $("#show-answer").on("click", function () {
-    if ($("#answer").hasClass("hide")) {
-      $("#question").addClass("hide");
-      $("#answer").removeClass("hide");
-      $("#show-answer").text("Hide Answer");
-    }else {
-       $("#question").removeClass("hide");
-      $("#answer").addClass("hide");
-      $("#show-answer").text("Show Answer");
-    }
-  });
+    $("#show-answer").on("click", function () {
+      if ($("#answer").hasClass("hide")) {
+        $("#question").addClass("hide");
+        $("#answer").removeClass("hide");
+        $("#show-answer").text("Hide Answer");
+      } else {
+        $("#question").removeClass("hide");
+        $("#answer").addClass("hide");
+        $("#show-answer").text("Show Answer");
+      }
+    });
 
-</script>
+  </script>
 </body>
 
 </html>
