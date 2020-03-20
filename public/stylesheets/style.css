@@ -15,7 +15,7 @@ h1, p, .subtitle {
     margin-right: 5px;
 }
 
-.button {
+.logout-button {
    width: 5%;
    align-self: flex-end;
    margin: 10px;
@@ -131,7 +131,7 @@ h1, p, .subtitle {
     .boxes {
         width: 33vw;
         min-height: 30vh;
-        height: 44vh;
+        height: 49vh;
         display: flex;
         align-items: center;
     }
@@ -178,8 +178,14 @@ h1, p, .subtitle {
     margin-bottom: 10px;;
 }
 
-.login-btn {
-    width: 35%;
+.login-link {
+    border: 2px solid black;
+    /* width: 100%; */
+}
+
+.login-button {
+    width: 25%;
+    height: 50px;
     margin: 10px auto;
     margin-bottom: 20px;
 }
@@ -192,6 +198,11 @@ h1, p, .subtitle {
 .login-title {
     width: 100%;
     font-size: 20px;
+}
+
+.login {
+    text-decoration: none;
+    color: white;
 }
 
 
