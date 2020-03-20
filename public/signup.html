@@ -2,15 +2,26 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+/>
+<script
+  defer
+  src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+></script>
+<link href="./stylesheets/style.css" rel="stylesheet" />
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
+  <!-- <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
@@ -37,6 +48,44 @@
         </form>
         <br />
         <p>Or log in <a href="/login">here</a></p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="is-light is-bold">
+    <div class="box is-light is-bold login-wrapper">
+      <img class="login-img" src="../images/coding.jpg" alt="" />
+
+      <form>
+
+      <div class="form-wrapper">
+        <h1 class="title login-title">Sign up below to get started</h1>
+        <div class="field">
+          <label class="label login-label">Email Address</label>
+          <div class="control">
+            <input
+              id="email-input"
+              class="input login-input"
+              type="email"
+              placeholder="e.g. KenanBeast@aol.com"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label login-label">Password</label>
+          <div class="control">
+            <input
+              id="password-input"
+              class="input login-input"
+              type="password"
+              placeholder="***********"
+            />
+          </div>
+        </div>
+        <button type="submit" class="login-btn button is-dark">Sign Up</button>
+  </form>
+        <p>Or sign up <a href="/">here</a></p>
       </div>
     </div>
   </div>

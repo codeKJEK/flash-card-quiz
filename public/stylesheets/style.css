@@ -1,3 +1,7 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
 body {
     background-color: rgb(253, 252, 252);
     padding: 10px;
@@ -15,7 +19,6 @@ h1, p, .subtitle {
    width: 5%;
    align-self: flex-end;
    margin: 10px;
-   /* padding: 10px; */
 }
 
 .hero {
@@ -45,14 +48,11 @@ h1, p, .subtitle {
     filter: drop-shadow(5px 5px 5px black);
     height: 180px;
     position: relative;
-    /* right: -15px;
-    float: right; */
     transition: .35s ease-in-out;
 }
 
 .js-box {
     background: linear-gradient(70deg, rgb(185, 166, 36), rgb(240,219,79) 52%);
-    /* padding-bottom: ; */
 }
 
 .js-logo {
@@ -60,23 +60,16 @@ h1, p, .subtitle {
     height: 175px;
     position: relative;
     top: 5px;
-    /* left: -10px;
-    float: left; */
     transition: .35s ease-in-out;
 }
 
 .css-box {
     background: linear-gradient(110deg, #264de4,#142e97);
-    /* padding-top: 100px; */
 }
 
 .css-logo {
     filter: drop-shadow(5px 5px 5px black);
     height: 160px;
-    /* position: relative;
-    top: -90px; */
-    /* right: -5px;
-    float: right; */
     transition: .35s ease-in-out;
 }
 
@@ -103,8 +96,6 @@ h1, p, .subtitle {
     margin: 0 auto;
     width: 95%;
     filter: drop-shadow(1px 1px 1px white) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.658));
-    /* background: linear-gradient(rgb(32, 30, 28), #3D3935); */
-    /* border: 1px solid black; */
 }
 
 .footer {
@@ -116,11 +107,9 @@ h1, p, .subtitle {
 @media only screen and (min-width: 768px) {
     
     .welcome {
-        /* width: 50%; */
         display: flex;
         flex-direction: column;  
         justify-content: flex-start;
-        /* padding: 0; */
         width: 400px;
     }
 
@@ -129,9 +118,6 @@ h1, p, .subtitle {
         padding-top: 1rem !important;
     }
     
-    /* .welcome-body {
-        
-    } */
 
     .axe {
         width: 30%;
@@ -140,7 +126,6 @@ h1, p, .subtitle {
     .box-wrapper {
         display: flex;
         flex-direction: row;
-        /* flex-grow: 2; */
     }
 
     .boxes {
@@ -155,9 +140,122 @@ h1, p, .subtitle {
         align-items: center;
     }
 
-    .js-box {
-        /* display: flex; */
-        /* align-items: flex-start; */
-    } 
+}
 
-   
+/* Login Styles */
+
+.login-wrapper {
+    height: 97vh;
+    width: 95vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom left, rgba(245, 243, 243, 0.801) 40%, white 60%);
+    box-shadow: 10px -10px 25px rgba(190, 189, 189, 0.644);
+}
+
+.form-wrapper {
+    width: 100%;
+    /* align-self: center; */
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-self: center;
+    /* border-left: 1px solid black; */
+    
+}
+
+.login-img {
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    border-radius: .25em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    border-bottom: 5px solid silver;
+    margin-bottom: 10px;;
+}
+
+.login-btn {
+    width: 35%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+
+.login-label {
+    text-align: center;
+    font-size: 15px;
+}
+
+.login-title {
+    width: 100%;
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 1024px)  {
+    .login-wrapper {
+        height: 97vh;
+        width: 95vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(to bottom left, rgba(245, 243, 243, 0.801) 40%, white 60%);
+        box-shadow: 10px -10px 25px rgba(190, 189, 189, 0.644);
+    }
+
+    form {
+        width: 48.5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        /* align-self: center; */
+        height: 50%;
+        margin-left: 6%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-self: center;
+        /* border-left: 1px solid black; */
+        
+    }
+
+    .login-img {
+        width: 50%;
+        overflow: hidden;
+        background-size: cover;
+        border-radius: .25em;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 100%;
+        border: none;
+        border-right: 5px solid silver;
+    }
+
+    .login-btn {
+        width: 35%;
+        margin: 10px auto;
+        margin-bottom: 20px;
+        height: 11%;
+    }
+
+    .login-label {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .login-input {
+        /* height: 20%; */
+        padding: 25px;
+    }
+
+    .login-title {
+        font-size: 30px;
+    }
+
+}
