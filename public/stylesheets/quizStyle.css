@@ -80,6 +80,7 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
+  font-size: 15px;
   /* width: 50%; */
 }
 
@@ -147,7 +148,8 @@ body {
 .box {
   margin: 0 auto !important;
   width: 100vw;
-  padding: 10px 0;
+  padding: 5px 0;
+  padding-top: 10px;
   text-align: center;
   border-radius: 0px;
   border-bottom: 1px solid #565857;
@@ -155,6 +157,8 @@ body {
   box-shadow: inset 0px 0px 50px rgb(235, 228, 228);
   color: #323330;
 }
+
+
 
 .Str-list a,
 .Num-list a,
@@ -171,7 +175,8 @@ body {
 
 #submit-answer {
   display: flex;
-  /* width: 100px; */
+  justify-content: center;
+  width: 90vw;
 }
 
 ul {
@@ -376,6 +381,7 @@ footer {
 
 @media only screen and (min-width: 1024px) {
   .containerTwo {
+    margin-left: 33px;
     margin-top: 40px;
     padding: 50px 20px;
   }
@@ -405,6 +411,7 @@ footer {
 @media only screen and (min-width: 1260px) {
   .containerTwo {
     position: relative;
+    margin-left: 10px;
   }
 }
 
