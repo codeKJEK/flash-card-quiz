@@ -43,10 +43,10 @@ require("./controllers/api-routes.js")(app);
 db.sequelize
   .sync({ force: true })
   .then(() => {
-    // STRING ============================
+    // STRING ===========================
     db.Question.create({
       exercise: 1,
-      question: "Find the length of  the 'str'variable.",
+      question: "Find the length of  the 'str' variable.",
       code: "var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
       label: "var strLength = ",
       answer: "str.length;",
@@ -81,7 +81,7 @@ db.sequelize
       exercise: 4,
       question: "Replace 'Hello' with 'Goodbye' in the 'str' variable.",
       code: "var str ='Hello World';",
-      label: "var newStr =",
+      label: "var newStr = ",
       answer: "str.replace('Hello','Goodbye');",
       category: "string_methods",
       next: "/members/string_methods/5",
@@ -92,7 +92,7 @@ db.sequelize
       exercise: 5,
       question: "Convert the 'str' variable into all uppercase letters.",
       code: "var str= 'hello world'",
-      label: "var uppercaseStr =",
+      label: "var uppercaseStr = ",
       answer: "str.toUpperCase();",
       category: "string_methods",
       next: "/members/string_methods/6",
@@ -103,7 +103,7 @@ db.sequelize
       exercise: 6,
       question: "Convert the 'str' variable into all lowercase letters.",
       code: "var str = 'HELLO WORLD';",
-      label: "var lowercaseStr =",
+      label: "var lowercaseStr = ",
       answer: "str.toLowerCase();",
       category: "string_methods",
       next: "/members/string_methods/7",
@@ -123,16 +123,16 @@ db.sequelize
     });
     db.Question.create({
       exercise: 8,
-      question: "Convert the “str” variable into an array using the “,”.",
-      code: "var str = “a,b,c,d,e,f,g,h”;",
-      label: "var strArray =",
-      answer: "str.split(“,”);",
+      question: "Convert the 'str' variable into an array using the ','.",
+      code: "var str = 'a,b,c,d,e,f,g,h';",
+      label: "var strArray = ",
+      answer: "str.split(',');",
       category: "string_methods",
       next: "/members/number_methods/1",
       maxlength: 15,
       width: "width:75px"
     });
-    // NUMBER ============================
+    // NUMBER ===========================
     db.Question.create({
       exercise: 1,
       question: "Convert the 'num' variable into a string.",
@@ -183,7 +183,7 @@ db.sequelize
       exercise: 2,
       question: "Convert the 'fruits' variable to a string",
       code: "var fruits =['Banana','Orange','Apple', 'Mango'];",
-      label: "var fruitString =",
+      label: "var fruitString = ",
       answer: "fruits.toString();",
       category: "array_methods",
       next: "/members/array_methods/3",
@@ -204,10 +204,10 @@ db.sequelize
     });
     db.Question.create({
       exercise: 4,
-      question: "Concatenate “array1” and “array2”",
+      question: "Concatenate 'array1' and 'array2'",
       code:
         "var array1 = ['Cecilie', 'Lone'];<br>var array2 = ['Emil', 'Tobias', 'Linus'];",
-      label: "bothArrays =",
+      label: "bothArrays = ",
       answer: "array1.concat(array2);",
       category: "array_methods",
       next: "/members/array_methods/5",
@@ -216,9 +216,9 @@ db.sequelize
     });
     db.Question.create({
       exercise: 5,
-      question: "Get the value “Volvo” from the cars array",
-      code: "var cars = [“Saab”, “Volvo”, “BMW”];",
-      label: "var x =",
+      question: "Get the value 'Volvo' from the cars array",
+      code: "var cars = ['Saab', 'Volvo', 'BMW'];",
+      label: "var x = ",
       answer: "cars[1];",
       category: "array_methods",
       next: "/members/array_methods/6",
@@ -227,9 +227,9 @@ db.sequelize
     });
     db.Question.create({
       exercise: 6,
-      question: "Change the first item of cars to “Ford”",
-      code: "var cars = [“Volvo”, “Jeep”, “Mercedes”];",
-      label: "-------- = “Ford”;",
+      question: "Change the first item of cars to 'Ford'",
+      code: "var cars = ['Volvo', 'Jeep', 'Mercedes'];",
+      label: "-------- = 'Ford';",
       answer: "cars[0]",
       category: "array_methods",
       next: "/members/array_methods/7",
@@ -240,7 +240,7 @@ db.sequelize
       exercise: 7,
       question:
         "Alert the number of items in an array, using the correct Array method",
-      code: "var cars = [“Volvo”,”Jeep”,”Mercedes”];",
+      code: "var cars = ['Volvo','Jeep','Mercedes'];",
       label: "alert(------------------);",
       answer: "cars.length",
       category: "array_methods",
