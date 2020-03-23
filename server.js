@@ -7,7 +7,7 @@ var {
   allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
 
-// Requiring passport as we\"ve configured it
+// Requiring passport as we've configured it
 var passport = require("./config/passport");
 
 // Setting up port and requiring models for syncing
@@ -19,7 +19,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-// We need to use sessions to keep track of our user\"s login status
+// We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
@@ -46,8 +46,8 @@ db.sequelize
     // STRING ===========================
     db.Question.create({
       exercise: 1,
-      question: "Find the length of  the \"str\" variable.",
-      code: "var str = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+      question: "Find the length of  the 'str' variable.",
+      code: "var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'",
       label: "var strLength = ",
       answer: "str.length;",
       category: "string_methods",
@@ -57,10 +57,10 @@ db.sequelize
     });
     db.Question.create({
       exercise: 2,
-      question: "Find the index of \"locate\" within the \"str\" variable.",
-      code: "var str= \"Please locate where \"locate\" occurs!\"",
+      question: "Find the index of 'locate' within the 'str' variable.",
+      code: "var str= 'Please locate where 'locate' occurs!'",
       label: "var position = ",
-      answer: "str.indexOf(\"locate\");",
+      answer: "str.indexOf('locate');",
       category: "string_methods",
       next: "/members/string_methods/3",
       maxlength: 22,
@@ -68,8 +68,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 3,
-      question: "Slice \"Banana\" from the \"str\" variable",
-      code: "var str= \"Apple, Banana, Kiwi\";",
+      question: "Slice 'Banana' from the 'str' variable",
+      code: "var str= 'Apple, Banana, Kiwi';",
       label: "var results = ",
       answer: "str.slice(7,13);",
       category: "string_methods",
@@ -79,10 +79,10 @@ db.sequelize
     });
     db.Question.create({
       exercise: 4,
-      question: "Replace \"Hello\" with \"Goodbye\" in the \"str\" variable.",
-      code: "var str =\"Hello World\";",
+      question: "Replace 'Hello' with 'Goodbye' in the 'str' variable.",
+      code: "var str ='Hello World';",
       label: "var newStr = ",
-      answer: "str.replace(\"Hello\",\"Goodbye\");",
+      answer: "str.replace('Hello','Goodbye');",
       category: "string_methods",
       next: "/members/string_methods/5",
       maxlength: 31,
@@ -90,8 +90,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 5,
-      question: "Convert the \"str\" variable into all uppercase letters.",
-      code: "var str= \"hello world\"",
+      question: "Convert the 'str' variable into all uppercase letters.",
+      code: "var str= 'hello world'",
       label: "var uppercaseStr = ",
       answer: "str.toUpperCase();",
       category: "string_methods",
@@ -101,8 +101,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 6,
-      question: "Convert the \"str\" variable into all lowercase letters.",
-      code: "var str = \"HELLO WORLD\";",
+      question: "Convert the 'str' variable into all lowercase letters.",
+      code: "var str = 'HELLO WORLD';",
       label: "var lowercaseStr = ",
       answer: "str.toLowerCase();",
       category: "string_methods",
@@ -112,8 +112,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 7,
-      question: "Find the character at index 0 in the \"str\" variable",
-      code: "var str =\"Hello World\";",
+      question: "Find the character at index 0 in the 'str' variable",
+      code: "var str ='Hello World';",
       label: "var indexZero = ",
       answer: "str.charAt(0);",
       category: "string_methods",
@@ -123,10 +123,10 @@ db.sequelize
     });
     db.Question.create({
       exercise: 8,
-      question: "Convert the \"str\" variable into an array using the \",\".",
-      code: "var str = \"a,b,c,d,e,f,g,h\";",
+      question: "Convert the 'str' variable into an array using the ','.",
+      code: "var str = 'a,b,c,d,e,f,g,h';",
       label: "var strArray = ",
-      answer: "str.split(\",\");",
+      answer: "str.split(',');",
       category: "string_methods",
       next: "/members/number_methods/1",
       maxlength: 15,
@@ -135,7 +135,7 @@ db.sequelize
     // NUMBER ===========================
     db.Question.create({
       exercise: 1,
-      question: "Convert the \"num\" variable into a string.",
+      question: "Convert the 'num' variable into a string.",
       code: "var num = 123;",
       label: "var numString = ",
       answer: "num.toString();",
@@ -146,7 +146,7 @@ db.sequelize
     });
     db.Question.create({
       exercise: 2,
-      question: "Give the \"num\" variable a fixed amount of 2 decimal places.",
+      question: "Give the 'num' variable a fixed amount of 2 decimal places.",
       code: "var num = 9.656;",
       label: "var fixedNum = ",
       answer: "num.toFixed(2);",
@@ -157,8 +157,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 3,
-      question: "Parse the \"txt\" variable and convert it to a number.",
-      code: "var txt = \"10\";",
+      question: "Parse the 'txt' variable and convert it to a number.",
+      code: "var txt = '10';",
       label: "var num = ",
       answer: "parseInt(txt);",
       category: "number_methods",
@@ -171,7 +171,7 @@ db.sequelize
       exercise: 1,
       question:
         "use the correct array method to remove the last item of the fruits array",
-      code: "var fruits = [\"Banana\",\"Orange\",\"Apple\"];",
+      code: "var fruits = ['Banana','Orange','Apple'];",
       label: null,
       answer: "fruits.pop();",
       category: "array_methods",
@@ -181,8 +181,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 2,
-      question: "Convert the \"fruits\" variable to a string",
-      code: "var fruits =[\"Banana\",\"Orange\",\"Apple\", \"Mango\"];",
+      question: "Convert the 'fruits' variable to a string",
+      code: "var fruits =['Banana','Orange','Apple', 'Mango'];",
       label: "var fruitString = ",
       answer: "fruits.toString();",
       category: "array_methods",
@@ -194,7 +194,7 @@ db.sequelize
       exercise: 3,
       question:
         "use the correct Array method to sort the fruits array alphabetically",
-      code: "var fruits =[\"Banana\",\"Orange\",\"Apple\", \"Kiwi\"];",
+      code: "var fruits =['Banana','Orange','Apple', 'Kiwi'];",
       label: null,
       answer: "fruits.sort();",
       category: "array_methods",
@@ -204,9 +204,9 @@ db.sequelize
     });
     db.Question.create({
       exercise: 4,
-      question: "Concatenate \"array1\" and \"array2\"",
+      question: "Concatenate 'array1' and 'array2'",
       code:
-        "var array1 = [\"Cecilie\", \"Lone\"];<br>var array2 = [\"Emil\", \"Tobias\", \"Linus\"];",
+        "var array1 = ['Cecilie', 'Lone'];<br>var array2 = ['Emil', 'Tobias', 'Linus'];",
       label: "bothArrays = ",
       answer: "array1.concat(array2);",
       category: "array_methods",
@@ -216,8 +216,8 @@ db.sequelize
     });
     db.Question.create({
       exercise: 5,
-      question: "Get the value \"Volvo\" from the cars array",
-      code: "var cars = [\"Saab\", \"Volvo\", \"BMW\"];",
+      question: "Get the value 'Volvo' from the cars array",
+      code: "var cars = ['Saab', 'Volvo', 'BMW'];",
       label: "var x = ",
       answer: "cars[1];",
       category: "array_methods",
@@ -227,9 +227,9 @@ db.sequelize
     });
     db.Question.create({
       exercise: 6,
-      question: "Change the first item of cars to \"Ford\"",
-      code: "var cars = [\"Volvo\", \"Jeep\", \"Mercedes\"];",
-      label: "-------- = \"Ford\";",
+      question: "Change the first item of cars to 'Ford'",
+      code: "var cars = ['Volvo', 'Jeep', 'Mercedes'];",
+      label: "-------- = 'Ford';",
       answer: "cars[0]",
       category: "array_methods",
       next: "/members/array_methods/7",
@@ -240,7 +240,7 @@ db.sequelize
       exercise: 7,
       question:
         "Alert the number of items in an array, using the correct Array method",
-      code: "var cars = [\"Volvo\",\"Jeep\",\"Mercedes\"];",
+      code: "var cars = ['Volvo','Jeep','Mercedes'];",
       label: "alert(------------------);",
       answer: "cars.length",
       category: "array_methods",
